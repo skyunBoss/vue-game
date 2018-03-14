@@ -1,0 +1,152 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+li{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+  	-webkit-touch-callout: none;
+  	-webkit-user-select: none;
+}
+input{
+	outline: none;
+}
+html,body{
+	background-color: #f4f8fd;
+	height: 100%;
+	width: 100%;
+	font-family: PingFang;
+	& > div > div{
+		padding: 82px 0 0 0;
+	}
+}
+em{
+	font-style: normal;
+}
+a {
+    text-decoraction: none;
+    background: none;
+}
+input{
+	 -webkit-appearance: none;
+}
+input::-webkit-input-placeholder{
+	color: #d6d6d6;
+	font-size: 30px;
+}
+.router-link-active {
+    text-decoration: none;
+    background: none;
+}
+.displayNone{
+	display: none;
+}
+.displayShow{
+	display: show;
+}
+.fr{
+	float: right;
+}
+.fl{
+	float: left;
+}
+#app{
+	height: 100%;
+}
+.mint-header{
+	height: 82px;
+	line-height: 82px;
+	background: none;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
+	h1{
+		color: #fff;
+		font-size: 36px;
+		text-align: center;
+		font-family: '宋体';
+	}
+	i{
+		font-size: 36px;
+	}
+	.mint-header-button{
+		font-size: 36px;
+		margin: 0 32px 0 0;
+		display: block;
+		button{
+			display: block;
+		}
+	}
+	.is-left,.is-right{
+		display: none;
+	}
+}
+.mint-toast{
+	.mint-toast-text{
+		font-size: 30px;
+	}
+}
+.mint-popup-bottom{
+	.picker-toolbar{
+		height: 80px;
+		.mint-datetime-action{
+			line-height: 80px;	
+			font-size: 30px;	
+		}
+	}
+	.picker-item{
+		font-size: 30px;
+	}
+	.picker-slot.picker-slot-divider{
+		font-size: 30px;
+	}
+}
+.mint-loadmore-content{
+	height: 100%;
+}
+.mint-msgbox-header{
+	padding: 30px 0 0;
+	.mint-msgbox-title{
+		font-size: 34px;		
+	}
+}
+.mint-msgbox-content{
+	.mint-msgbox-message{
+		font-size: 30px;				
+	}	
+}
+.mint-msgbox-btns{
+	height: 80px;
+	.mint-msgbox-btn{
+		font-size: 30px;
+	}
+	.mint-msgbox-confirm{
+		color: #76a9fd;
+	}
+}
+
+// 竖屏
+.portrait{
+	.mint-header{
+		top: 40px;
+	}
+	& > div{
+		padding: 122px 0 0 0;
+	}
+}
+
+// 横屏
+.landscape{
+	.mint-header{
+		top: 0;
+	}
+	& > div{
+		padding: 82px 0 0 0;
+	}
+}
+.mint-msgbox{
+	padding: 0;
+}
