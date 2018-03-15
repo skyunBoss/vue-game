@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vue-game
 
 > A Vue.js project
@@ -19,3 +20,7 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# vue-game
+猜单词游戏
+>>>>>>> 911595c54817044299620a15ae7052e65f5b2785

@@ -46,15 +46,14 @@
 					success: '恭喜您，答对了,奖励1个时间币',
 					all: '恭喜您，全部答对,本轮游戏共获得20个时间币',
 					none: '请选择答案',
-					moreNum: '你提示的次数太多了，发挥你的大脑想象吧'
+					moreNum: '你提示的次数太多了，发挥你的大脑记忆吧'
 				}
 			}
 		},
 		methods: {
 			toggle(letter, index){	
 				let _this = this,
-					eName = _this.exerciseList[_this.index-1].eName,
-					successAudio = document.getElementById('success')
+					eName = _this.exerciseList[_this.index-1].eName
 				for(let i=0;i<_this.splictName.length;i++){
 					if(_this.splictName[i] == '' && _this.result[index].show){
 						if(!_this.cannel_index){
@@ -81,7 +80,6 @@
 								  position: 'bottom',
 								  duration: _this.duration
 								})
-								successAudio.play() //music
 								_this.changeExercise()  //切换题目
 							}
 						}
@@ -92,7 +90,7 @@
 			prompt(){  //提示
 				let _this = this,
 					eName = _this.exerciseList[_this.index-1].eName
-				if(_this.prompt_num < 2){
+				if(_this.prompt_num < 1){
 					for(let i=0;i<_this.splictName.length;i++){
 						if(_this.splictName[i] == ''){
 							if(!_this.cannel_index){
@@ -102,9 +100,9 @@
 								_this.cannel_index = ''							
 							}
 							for(let j=0;j<_this.result.length;j++){  // hide
-								if(_this.result[i].name == eName.split("")[i] && (eName.split(eName.split("")[i])).length-1 <= 1){
+								if(_this.result[j].name == eName.split("")[i]){
 									_this.result[i].show = false
-								}
+								} 
 							}
 							if(i == _this.splictName.length-1){  // todo
 								if(eName !== _this.splictName.join("")){ // error
@@ -134,9 +132,14 @@
 				}
 			},
 			changeExercise(){  //换题目
-				if(this.index <= this.exerciseList.length){
-					this.index += 1
-					this.reload()
+				let _this = this,
+					successAudio = document.getElementById('success')
+				if(_this.index <= _this.exerciseList.length){
+					successAudio.play() //music
+					setTimeout(function(){
+						_this.index += 1
+						_this.reload()
+					},1000)
 				}else{
 					Toast({
 					  message: this.toast.all,
